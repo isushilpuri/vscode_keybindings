@@ -1,0 +1,95 @@
+{
+    "editor.fontFamily": "'Operator Mono Lig', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontSize": 18,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative",
+    "vim.easymotion": true,
+    "vim.smartRelativeLine": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        {
+        "before": ["k", "j"],
+        "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // switch b/w buffers
+        {
+            "before": ["<S-h>"],
+            "commands": [":bprevious"]
+        },
+        {
+            "before": ["<S-l>"],
+            "commands": [":bnext"]
+        },
+        // splits
+        {
+            "before": ["leader", "v"],
+            "commands": [":vsplit"]
+        },
+        {
+            "before": ["leader", "s"],
+            "commands": [":split"]
+        },
+        // panes
+        {
+            "before": ["leader", "h"],
+            "commands": ["workbench.action.focusLeftGroup"]
+        },
+        {
+            "before": ["leader", "j"],
+            "commands": ["workbench.action.focusBelowGroup"]
+        },
+        {
+            "before": ["leader", "k"],
+            "commands": ["workbench.action.focusAboveGroup"]
+        },
+        {
+            "before": ["leader", "l"],
+            "commands": ["workbench.action.focusRightGroup"]
+        },
+        // file tree
+        {
+            "before": ["leader", "n", "e"],
+            "commands": ["workbench.explorer.fileView.focus"]
+        },
+        // nice to have
+        { "before": ["leader", "w"], "commands": [":w!"] },
+        { "before": ["leader", "q"], "commands": [":q!"] },
+        { "before": ["leader", "x"], "commands": [":x!"] },
+        {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+        },
+        {
+        "before": ["<C-n>"],
+        "commands": [":nohl"]
+        },
+        {
+        "before": ["K"],
+        "commands": ["lineBreakInsert"],
+        "silent": true
+        }
+    ],
+    "vim.handleKeys": {
+        // "<C-a>": false,
+        "<C-s>": false,
+        "<C-w>": false,
+        "<C-z>": false,
+        "<C-y>": false,
+        "<C-f>": false
+    },
+    
+    // To improve performance
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Tokyo Night",
+    "tabnine.experimentalAutoImports": true
+}
