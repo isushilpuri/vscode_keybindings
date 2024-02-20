@@ -62,6 +62,8 @@
         { "before": ["leader", "w"], "commands": [":w!"] },
         { "before": ["leader", "q"], "commands": [":q!"] },
         { "before": ["leader", "x"], "commands": [":x!"] },
+        { "before": ["leader", "f", "f"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
         {
         "before": ["<leader>", "d"],
         "after": ["d", "d"]
