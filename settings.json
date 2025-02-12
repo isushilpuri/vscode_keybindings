@@ -1,9 +1,30 @@
 {
     "editor.fontFamily": "'Operator Mono Lig', 'Droid Sans Mono', 'monospace', monospace",
     "editor.fontSize": 18,
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "[python]": {
+        "editor.defaultFormatter": "charlierMarsh.ruff"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "editor.formatOnSave": true,
     "editor.lineNumbers": "relative",
+    // Pylance configs
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "standard",
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportArgumentType": "information",
+        "reportOptionalSubscript": "information",
+        "reportImplicitStringConcatenation": "warning",
+        "reportOperatorIssue": "warning",
+        "reportUnboundVariable": "error"
+    },
+
+    // Vim Configs
     "vim.easymotion": true,
     "vim.smartRelativeLine": true,
     "vim.incsearch": true,
@@ -63,7 +84,8 @@
         { "before": ["leader", "q"], "commands": [":q!"] },
         { "before": ["leader", "x"], "commands": [":x!"] },
         { "before": ["leader", "f", "f"], "commands": ["workbench.action.quickOpen"] },
-        { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+        { "before": ["leader", "f", "m"], "commands": ["editor.action.formatDocument"] },
+        { "before": ["leader", "k"], "commands": ["editor.action.showDefinitionPreviewHover"] },
         {
         "before": ["<leader>", "d"],
         "after": ["d", "d"]
@@ -79,7 +101,6 @@
         }
     ],
     "vim.handleKeys": {
-        // "<C-a>": false,
         "<C-s>": false,
         "<C-w>": false,
         "<C-z>": false,
@@ -93,5 +114,7 @@
     },
     "editor.fontLigatures": true,
     "workbench.colorTheme": "Tokyo Night",
-    "tabnine.experimentalAutoImports": true
+    // Uncomment to use vimrc file
+    // "vim.vimrc.enable": true,
+    // "vim.vimrc.path": "C:\\Users\\username\\.vimrc"
 }

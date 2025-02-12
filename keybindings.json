@@ -1,5 +1,16 @@
 // Place your key bindings in this file to override the defaults
 [
+  {
+      "key": "tab",
+      "command": "tab",
+      "when": "editorTextFocus && !editorTabMovesFocus"
+  },
+  {
+      "key": "shift + tab",
+      "command": "outdent",
+      "when": "editorTextFocus && !editorTabMovesFocus"
+  },
+
   // NAVIGATION
   {
     "key": "ctrl+shift+a",
@@ -25,6 +36,11 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
+  {
+    "key": "ctrl+shift+m",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
   // FILE TREE
   {
     "command": "workbench.action.toggleSidebarVisibility",
@@ -32,11 +48,11 @@
   },
   {
     "command": "workbench.files.action.focusFilesExplorer",
-    "key": "ctrl+e",
+    "key": "space+e",
     "when": "editorTextFocus"
   },
   {
-    "key": "n",
+    "key": "a",
     "command": "explorer.newFile",
     "when": "filesExplorerFocus && !inputFocus"
   },
